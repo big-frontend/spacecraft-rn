@@ -20,7 +20,14 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ectrolytej.spacecraftrn"
+      "package": "com.ectrolytej.spacecraftrn",
+      "enableHermes": true,
+      "enableProguardInReleaseBuilds": true,
+      "enableShrinkResources": true,
+      "enableR8": true,
+      "enableD8": true,
+      "enableSeparateBuildPerCPUArchitecture": true,
+      "enableDangerousExperimentalLeanBuilds": true
     },
     "web": {
       "bundler": "metro",
@@ -37,7 +44,9 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
