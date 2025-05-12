@@ -1,11 +1,37 @@
-import { requireNativeView } from 'expo';
-import * as React from 'react';
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import MainModule from './MainModule';
 
-import { MainModuleViewProps } from './MainModule.types';
+export default function MainModuleView() {
+  const [value, setValue] = React.useState<string>('');
 
-const NativeView: React.ComponentType<MainModuleViewProps> =
-  requireNativeView('MainModule');
+  React.useEffect(() => {
+    // 调用原生模块的方法
+    const result = MainModule.hello();
+    setValue(result);
+  }, []);
 
-export default function MainModuleView(props: MainModuleViewProps) {
-  return <NativeView {...props} />;
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Main Module View</Text>
+      <Text style={styles.value}>{value}</Text>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  value: {
+    fontSize: 16,
+    color: '#666',
+  },
+});

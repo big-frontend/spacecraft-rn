@@ -1,7 +1,7 @@
 {
-  "name": "main-module",
+  "name": "cpp-module",
   "version": "1.0.0",
-  "description": "Main module for React Native",
+  "description": "C++ module for React Native",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -15,6 +15,7 @@
   "keywords": [
     "react-native",
     "expo",
+    "cpp",
     "native-module"
   ],
   "author": "",
@@ -32,4 +33,4 @@
     "expo-module-scripts": "^3.0.0",
     "typescript": "^5.1.3"
   }
-}
+} 

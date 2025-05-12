@@ -1,17 +1,12 @@
 {
-  "platforms": [
-    "apple",
-    "android",
-    "web"
-  ],
-  "apple": {
-    "modules": [
-      "MainModule"
-    ]
+  "name": "main-module",
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["MainModule"],
+    "frameworks": ["Foundation"]
   },
   "android": {
-    "modules": [
-      "expo.modules.mainmodule.MainModule"
-    ]
+    "modules": ["com.mainmodule.MainModule"],
+    "packages": ["com.mainmodule.MainModule"]
   }
 }

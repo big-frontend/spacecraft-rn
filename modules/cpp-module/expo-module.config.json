@@ -1,0 +1,12 @@
+{
+  "name": "cpp-module",
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["CppModule"],
+    "frameworks": ["Foundation"]
+  },
+  "android": {
+    "modules": ["com.cppmodule.CppModule"],
+    "packages": ["com.cppmodule.CppModule"]
+  }
+} 
