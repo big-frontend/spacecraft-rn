@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import SensorChart from '../components/SensorChart';
+import SensorChart from '@/components/SensorChart';
 
 export default function Home() {
   return (
