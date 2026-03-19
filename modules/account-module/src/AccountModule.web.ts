@@ -16,4 +16,4 @@ class AccountModule extends NativeModule<AccountModuleEvents> {
   }
 };
 
-export default registerWebModule(AccountModule);
+export default registerWebModule(AccountModule, 'AccountModule');

@@ -7,7 +7,6 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.ectrolytej.spacecraftrn",
@@ -20,19 +19,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ectrolytej.spacecraftrn",
-      "enableHermes": true,
-      "enableProguardInReleaseBuilds": true,
-      "enableShrinkResources": true,
-      "enableR8": true,
-      "enableD8": true,
-      "enableSeparateBuildPerCPUArchitecture": true,
-      "enableDangerousExperimentalLeanBuilds": true
+      "package": "com.ectrolytej.spacecraftrn"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-          "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",

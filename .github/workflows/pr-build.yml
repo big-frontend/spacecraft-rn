@@ -1,0 +1,45 @@
+name: pr-build
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: pr-build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    permissions:
+      contents: read
+
+    env:
+      CI: true
+      EXPO_NO_TELEMETRY: "1"
+      EAS_NO_TELEMETRY: "1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies (npm)
+        run: npm ci
+
+      - name: Expo doctor
+        working-directory: apps/app
+        run: npx expo-doctor
+
+      - name: Jest tests (no watch)
+        run: npm -w apps/app test -- --watchAll=false
+

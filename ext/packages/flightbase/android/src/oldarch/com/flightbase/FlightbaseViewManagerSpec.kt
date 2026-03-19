@@ -1,9 +1,0 @@
-package com.flightbase
-
-import android.view.View
-import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.uimanager.SimpleViewManager
-
-abstract class FlightbaseViewManagerSpec<T : View> : SimpleViewManager<T>() {
-  abstract fun setColor(view: T?, value: String?)
-}
