@@ -16,4 +16,4 @@ class MainModule extends NativeModule<MainModuleEvents> {
   }
 };
 
-export default registerWebModule(MainModule);
+export default registerWebModule(MainModule, 'MainModule');

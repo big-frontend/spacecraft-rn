@@ -2,8 +2,8 @@
   "name": "cpp-module",
   "version": "1.0.0",
   "description": "C++ module for React Native",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "index.ts",
+  "types": "index.ts",
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
@@ -26,10 +26,11 @@
     "react-native": ">=0.72.0"
   },
   "dependencies": {
-    "expo-modules-core": "~1.5.12"
+    "expo-modules-core": "~55.0.17",
+    "base": "*"
   },
   "devDependencies": {
-    "@types/react": "~18.2.14",
+    "@types/react": "~19.2.2",
     "expo-module-scripts": "^3.0.0",
     "typescript": "^5.1.3"
   }
